@@ -48,6 +48,13 @@
           </a>
         </li>
 
+        <li class="treeview {{(Request::segment(2) == 'intro-product')? 'active' : '' }}">
+          <a href="{{ url('admin/intro-product') }}"><i class="fa fa-link"></i> <span>Giới thiệu sản phẩm</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
+
         {{-- <li class="treeview {{(Request::segment(2) == 'order')? 'active' : '' }}">
           <a href="#"><i class="fa fa-link"></i> <span>Quản lý đơn hàng</span>
             <span class="pull-right-container">

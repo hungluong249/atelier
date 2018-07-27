@@ -40,6 +40,7 @@
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-2">
                                     <a href="{{ route('company.edit', ['id' => $detail['id']]) }}" class="btn btn-primary">Sửa</a>
+                                </div>
                             </div>
                         </form>
                     </div>
