@@ -21,22 +21,37 @@
             </div>
         </section>
 
-        <section id="list-news" class="list-blogs" ng-controller="SearchController">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="row">
-                        <div class="item col-sm-4 col-xs-12" ng-repeat="item in searchResult">
+        <section id="list-search" ng-controller="SearchController">
+            <div class="container">
+                <div class="row">
+                    <div class="item col-sm-4 col-xs-12" ng-repeat="item in searchResult">
+                        <div class="inner">
                             <div ng-show="item.target == 99" >
-                                <a href="http://localhost/atelier/tin-tuc/chi-tiet/<% item.slug %>" target="_self">[Tin tức] <% item.title %></a>
-                                <p class="paragraph"  ng-bind-html="$sce.trustAsHtml(item.description)"></p>
+                                <label>[Tin tức]</label>
+                                <a href="http://localhost/atelier/tin-tuc/chi-tiet/<% item.slug %>" target="_self">
+                                    <h2 class="post-heading dark"><% item.title %></h2>
+                                </a>
+                                <p class="description"  ng-bind-html="$sce.trustAsHtml(item.description)"></p>
                             </div>
+                        </div>
+
+                        <div class="inner">
                             <div ng-show="item.target == 98" >
-                                <a href="http://localhost/atelier/xu-huong/chi-tiet/<% item.slug %>" target="_self">[Xu hướng] <% item.title %></a>
-                                <p class="paragraph"  ng-bind-html="$sce.trustAsHtml(item.description)"></p>
+                                <label>[Xu hướng]</label>
+                                <a href="http://localhost/atelier/xu-huong/chi-tiet/<% item.slug %>" target="_self">
+                                    <h2 class="post-heading dark"><% item.title %></h2>
+                                </a>
+                                <p class="description"  ng-bind-html="$sce.trustAsHtml(item.description)"></p>
                             </div>
+                        </div>
+
+                        <div class="inner">
                             <div ng-show="item.target == 97" >
-                                <a href="http://localhost/atelier/san-pham/chi-tiet/<% item.slug %>" target="_self">[Sản phẩm] <% item.name %></a>
-                                <p class="paragraph"  ng-bind-html="$sce.trustAsHtml(item.description)"></p>
+                                <label>[Sản phẩm]</label>
+                                <a href="http://localhost/atelier/san-pham/chi-tiet/<% item.slug %>" target="_self">
+                                    <h2 class="post-heading dark"><% item.name %></h2>
+                                </a>
+                                <p class="description"  ng-bind-html="$sce.trustAsHtml(item.description)"></p>
                             </div>
                         </div>
                     </div>
