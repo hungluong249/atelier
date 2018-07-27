@@ -44,61 +44,88 @@ EMBED STYLE
                     padding-right: 30px;
 
                     .row{
-                        .item{
-                            height: 450px;
-                            margin-bottom: 30px;
+                        .left{
+                            .item{
+                                height: 450px;
+                                margin-bottom: 30px;
 
-                            .inner{
-                                height: 100%;
-                                background-color: #fff;
-
-                                -webkit-transform: translateY(0);
-                                -moz-transform: translateY(0);
-                                -ms-transform: translateY(0);
-                                -o-transform: translateY(0);
-                                transform: translateY(0);
-
-                                @include transition(500ms);
-
-                                .mask{
-                                    width: 100%;
-                                    height: 200px;
-
-                                }
-
-                                h2.post-heading{
-                                    margin-bottom: 30px;
-
-                                    padding-left: 15px;
-                                    padding-right: 15px;
-                                }
-
-                                p.description{
-                                    color: $gray-light;
-                                    margin-bottom: 30px;
-
-                                    padding-left: 15px;
-                                    padding-right: 15px;
-                                }
-
-                                a.btn-outline{
-                                    margin-left: 15px;
-                                }
-                            }
-
-                            &:hover{
                                 .inner{
-                                    -webkit-box-shadow:  0 4px 15px $gray;
-                                    -moz-box-shadow:  0 4px 15px $gray;
-                                    box-shadow:  0 4px 15px $gray;
+                                    height: 100%;
+                                    background-color: #fff;
 
-                                    -webkit-transform: translateY(-5px);
-                                    -moz-transform: translateY(-5px);
-                                    -ms-transform: translateY(-5px);
-                                    -o-transform: translateY(-5px);
-                                    transform: translateY(-5px);
+                                    -webkit-transform: translateY(0);
+                                    -moz-transform: translateY(0);
+                                    -ms-transform: translateY(0);
+                                    -o-transform: translateY(0);
+                                    transform: translateY(0);
 
                                     @include transition(500ms);
+
+                                    .mask{
+                                        width: 100%;
+                                        height: 200px;
+
+                                    }
+
+                                    h2.post-heading{
+                                        margin-bottom: 30px;
+
+                                        padding-left: 15px;
+                                        padding-right: 15px;
+                                    }
+
+                                    p.description{
+                                        color: $gray-light;
+                                        margin-bottom: 30px;
+
+                                        padding-left: 15px;
+                                        padding-right: 15px;
+                                    }
+
+                                    a.btn-outline{
+                                        margin-left: 15px;
+                                    }
+                                }
+
+                                &:hover{
+                                    .inner{
+                                        -webkit-box-shadow:  0 4px 15px $gray;
+                                        -moz-box-shadow:  0 4px 15px $gray;
+                                        box-shadow:  0 4px 15px $gray;
+
+                                        -webkit-transform: translateY(-5px);
+                                        -moz-transform: translateY(-5px);
+                                        -ms-transform: translateY(-5px);
+                                        -o-transform: translateY(-5px);
+                                        transform: translateY(-5px);
+
+                                        @include transition(500ms);
+                                    }
+                                }
+                            }
+                        }
+
+                        .right{
+                            .panel{
+                                ul{
+                                    li{
+                                        a{
+                                            color: $gray-light;
+
+                                            &:hover{
+                                                color: $gray-dark;
+                                            }
+                                        }
+
+                                        &.active{
+                                            background-color: #eaeaea;
+                                            border-color: transparent;
+
+                                            a{
+                                                color: $gray-dark;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -135,6 +162,30 @@ EMBED STYLE
 }
 
 @media (max-width: 768px) {
+    #news{
+        section{
+
+            &.list-blogs{
+                .container-fluid{
+                    .container{
+                        .row{
+                            display: flex;
+                            flex-direction: column;
+
+                            .left{
+                                order: 2;
+                            }
+
+                            .right{
+                                order: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     #detail-news{
         .section-header{
             .container-fluid{
