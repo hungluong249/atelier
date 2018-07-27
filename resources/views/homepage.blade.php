@@ -13,33 +13,13 @@
                 <div id="top-slider" class="carousel slide" data-ride="carousel">
 
                     <ul class="slide-control">
-                        <li data-target="#top-slider" data-slide-to="0">
+                        <li data-target="#top-slider" data-slide-to="<% $index %>" ng-repeat="banner in banners">
                             <div class="inner">
                                 <div class="icon">
                                     <i class="fa fa-2x fa-plus" aria-hidden="false"></i>
                                 </div>
                                 <div class="title">
-                                    <h4>the future of loft living</h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li data-target="#top-slider" data-slide-to="1">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i class="fa fa-2x fa-plus" aria-hidden="false"></i>
-                                </div>
-                                <div class="title">
-                                    <h4>the future of loft living</h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li data-target="#top-slider" data-slide-to="1">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i class="fa fa-2x fa-plus" aria-hidden="false"></i>
-                                </div>
-                                <div class="title">
-                                    <h4>the future of loft living</h4>
+                                    <h4><% banner.title %></h4>
                                 </div>
                             </div>
                         </li>
@@ -47,30 +27,15 @@
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
-                        <div class="item active">
+                        <div class="item" ng-class="{active : $index === 0}" ng-repeat="banner in banners">
                             <div class="mask">
-                                <img src="{{ asset('public/frontend/img/demo-top-slider-1.jpg') }}" alt="slide">
+                                <img src="{{ asset('storage/app/banners') }}<% '/' + banner.image %>" alt="slide">
                             </div>
                             <div class="carousel-caption">
                                 <h1 class="heading light">
-                                    the future of loft living
+                                    <% banner.title %>
                                 </h1>
-                                <p class="paragraph light">
-                                    Nunc odio magna, ultricies sed orci id, ullamcorper consequat arcu. Maecenas fermentum, nibh vitae ornare tempor, orci libero bibendum odio, eget ultrices magna diam ac nulla. Praesent facilisis ex in mi interdum euismod. Quisque volutpat augue volutpat ligula lacinia, et dapibus nibh porttitor. Sed pharetra quis purus eu tempor. Sed bibendum ligula in ullamcorper feugiat. Vestibulum in tortor vel augue eleifend porta eu pulvinar nisl. Nam ac arcu ex.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="mask">
-                                <img src="{{ asset('public/frontend/img/demo-top-slider-2.jpg') }}" alt="slide">
-                            </div>
-                            <div class="carousel-caption">
-                                <h1 class="heading light">
-                                    the future of loft living
-                                </h1>
-                                <p class="paragraph light">
-                                    Nunc odio magna, ultricies sed orci id, ullamcorper consequat arcu. Maecenas fermentum, nibh vitae ornare tempor, orci libero bibendum odio, eget ultrices magna diam ac nulla. Praesent facilisis ex in mi interdum euismod. Quisque volutpat augue volutpat ligula lacinia, et dapibus nibh porttitor. Sed pharetra quis purus eu tempor. Sed bibendum ligula in ullamcorper feugiat. Vestibulum in tortor vel augue eleifend porta eu pulvinar nisl. Nam ac arcu ex.
-                                </p>
+                                <p class="paragraph light" ng-bind-html="$sce.trustAsHtml(banner.description)"> </p>
                             </div>
                         </div>
                     </div>

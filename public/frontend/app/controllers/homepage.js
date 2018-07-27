@@ -11,6 +11,7 @@
         $scope.news = [];
         $scope.blog = [];
         $scope.company = [];
+        $scope.banners = [];
     
         $scope.owlOptions = {
             nav: true,
@@ -86,6 +87,16 @@
         
         // });
         
+        // Fetch banners
+        $http({
+            method: 'GET',
+            url: API_URL + 'banner'
+        }).then(function (success) {
+            $scope.banners = success.data;
+        }, function (error) {
+        
+        });
+        
         // Fetch library
         $http({
             method: 'GET',
@@ -118,12 +129,12 @@
         });
         
         // Build menu product
-        menuProductFactory.menuProduct()
-            .then(function (success) {
-                $scope.menuProduct = success.data;
-            }, function (error) {
+        // menuProductFactory.menuProduct()
+        //     .then(function (success) {
+        //         $scope.menuProduct = success.data;
+        //     }, function (error) {
             
-            });
+        //     });
         
         // Build blog
         blogFactory.blog()

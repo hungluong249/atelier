@@ -133,5 +133,8 @@ Route::prefix('v1')->group(function() {
 
         //Intro product route
         Route::get('intro-product', 'IntroProductApiController@fetchIntroProduct');
+
+        //banner route
+        Route::get('banner', 'BannerApiController@fetchBanners');
     });
 });
