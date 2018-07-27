@@ -296,5 +296,9 @@ Route::prefix('admin')->group(function() {
         //Company route
         Route::resource('company', 'CompanyController');
         Route::post('company/update/{id}', 'CompanyController@update')->name('company.update');
+
+        //Intro product route
+        Route::resource('intro-product', 'IntroProductController');
+        Route::post('intro-product/update/{id}', 'IntroProductController@update')->name('intro-product.update');
     });
 });
