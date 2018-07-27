@@ -24,13 +24,12 @@
                         <div class="row">
                             <div class="left col-sm-6 col-xs-12">
                                 <h4 class="sub-heading">
-                                    Chúng tôi tin rằng sự thành công lâu dài của doanh nghiệp được xây dựng dựa trên các chuẩn mực ĐẠO ĐỨC, điều này là nguyên tắc định hướng của Artelier 31.
+                                    <% introProduct.sub_title %>
                                 </h4>
                             </div>
 
                             <div class="right col-sm-6 col-xs-12">
-                                <p class="paragraph">Với tiêu chí SÁNG TẠO KHÔNG NGỪNG, Artelier 31 chủ động tìm kiếm các giải pháp cho khách hàng của mình, luôn luôn cố gắng cải tiến biện pháp thi công, đáp ứng nhu cầu của mọi khách hàng, của mọi công trình.</p>
-                                <p class="paragraph">Bộ máy NHÂN SỰ TINH HOA, là một trong những năng lực cốt lõi làm nên sự khác biệt của doanh nghiệp, là nền tảng để giữ vững cam kết, mang lại chất lượng dịch vụ tốt nhất cho khách hàng. Artelier 31 là một môi trường làm việc “trong mơ” để cống hiến và hoàn thiện kỹ năng bản thân cho mỗi cá nhân trên thị trường lao động. Chúng tôi mang tới những cơ hội trải nghiệm và luôn khuyến khích đội ngũ cán bộ nhân viên chinh phục và làm chủ tiềm năng của họ.</p>
+                                <p class="paragraph"  ng-bind-html="$sce.trustAsHtml(introProduct.description)"></p>
                             </div>
                         </div>
                     </div>

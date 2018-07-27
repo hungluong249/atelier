@@ -20,7 +20,7 @@
                                 <label for="description" class="col-md-2 control-label">Giới thiệu</label>
                                     
                                 <div class="col-md-8">
-                                    <textarea id="description" rows="10" class="form-control" name="description" value="{{ old('description') }}" readonly >{{ $detail->description }}</textarea>
+                                    <textarea id="description" rows="10" class="form-control" name="description" value="{{ old('description') }}" readonly >{!! strip_tags($detail->description) !!}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">

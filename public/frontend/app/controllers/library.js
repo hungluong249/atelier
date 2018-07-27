@@ -1,14 +1,22 @@
 (function(){
     app.controller('LibraryController', function($scope, $http, $location, API_URL, $sce){
         $scope.$sce = $sce;
-        $scope.introduce = [];
+        $scope.library = [];
 
         $http({
             method: 'GET',
             url: API_URL + 'library'
         }).then(function(success){
             $scope.library = success.data;
-            console.log($scope.library);
+        }, function(error){
+
+        });
+
+        $http({
+            method: 'GET',
+            url: API_URL + 'intro-product'
+        }).then(function(success){
+            $scope.introProduct = success.data;
         }, function(error){
 
         });
