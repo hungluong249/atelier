@@ -21,13 +21,11 @@ class ContactApiController extends Controller{
     public function sendMail(){
     	$name = Input::get('name');
         $email = Input::get('email');
-        $phone = Input::get('phone');
-        $reason = Input::get('reason');
         $content = Input::get('content');
-        $data = array('name' => $name, 'email' => $email, 'phone' => $phone, 'reason' => $reason, 'content' => $content);
-        Mail::send('admin/subscribe/mailfb', array('name' => $name, 'email' => $email, 'phone' => $phone, 'reason' => $reason, 'content' => $content), function($message) use ($data){
+        $data = array('name' => $name, 'email' => $email, 'content' => $content);
+        Mail::send('admin/subscribe/mailfb', array('name' => $name, 'email' => $email, 'content' => $content), function($message) use ($data){
         	
-            $message->to('minhtruong93gtvt@gmail.com', 'Visitor')->subject($data['reason']);
+            $message->to('minhtruong93gtvt@gmail.com', 'Visitor')->subject('[Atelier31.vn] Mail form website');
         });
     	
 

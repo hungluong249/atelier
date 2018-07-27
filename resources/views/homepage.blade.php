@@ -319,19 +319,23 @@
                         <div class="right col-sm-8 col-xs-12">
                             <h2>Gửi tin nhắn cho chúng tôi</h2>
 
-                            <form>
+                            <form name="contactForm" ng-submit="submit()">
                                 <div class="row">
                                     <div class="form-group col-sm-6 col-xs-12">
-                                        <input type="text" class="form-control" id="inputName" placeholder="Tên đầy đủ của bạn (*)">
+                                        <input type="text" class="form-control" id="inputName" name="name" placeholder="Tên đầy đủ của bạn (*)" ng-model="contact.name" required >
+                                        <span ng-show="(contactForm.name.$dirty || submitted) && contactForm.name.$error.required">Họ Tên không được trống.</span>
                                     </div>
                                     <div class="form-group col-sm-6 col-xs-12">
-                                        <input type="text" class="form-control" id="inputEmail" placeholder="Email của bạn (*)">
+                                        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email của bạn (*)" ng-model="contact.email" required >
+                                        <span ng-show="(contactForm.email.$dirty || submitted) && contactForm.email.$error.required">Email  không được trống.</span>
+                                        <span ng-show="(contactForm.email.$dirty || submitted) && contactForm.email.$error.email">Định dạng Email không đúng.</span>
                                     </div>
                                     <div class="form-group col-xs-12">
-                                        <textarea class="form-control" rows="3" placeholder="Viết một cái gì đó cho chúng tôi..."></textarea>
+                                        <textarea class="form-control" rows="3" name="content" placeholder="Viết một cái gì đó cho chúng tôi..." ng-model="contact.content" required ></textarea>
+                                        <span ng-show="(contactForm.content.$dirty || submitted) && contactForm.content.$error.required">Nội dung không được trống.</span>
                                     </div>
                                     <div class="form-group col-sm-3 col-xs-6">
-                                        <button class="btn btn-primary" type="submit">Gửi tin nhắn</button>
+                                        <button class="btn btn-primary btn-contact" type="submit" ng-click="send(contact)"  ng-disabled="contactForm.$invalid" >Gửi tin nhắn</button>
                                     </div>
                                 </div>
                             </form>

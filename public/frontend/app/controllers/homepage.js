@@ -161,6 +161,58 @@
             }, function (res) {
             });
         };
+
+        //contact
+        
+
+        $scope.contact= {
+            name: '',
+            email: '',
+            content: ''
+        };
+
+        $scope.submit = function(){
+            if($scope.contactForm.$invalid){
+                return false;
+            }else{
+                $("#before-send").show();
+                $http({
+                    method: 'GET',
+                    url: API_URL + 'sendmail',
+                    params: {
+                        name : $scope.contact.name, email: $scope.contact.email, content : $scope.contact.content
+                    }
+                }).then(function(success){
+                    window.alert('Đăng ký thành công!');
+                    $("#before-send").hide();
+                    $('.btn-contact').prop('disabled', false);
+                }, function(error){
+
+                });
+            }
+        }
+
+
+        // $('.btn-contact').click(function(){
+        //     $('.btn-contact').prop('disabled', true);
+        // });
+
+        // $scope.send = function(contact) {
+        //     $("#before-send").show();
+        //     $http({
+        //         method: 'GET',
+        //         url: API_URL + 'sendmail',
+        //         params: {
+        //             name : contact.name, email: contact.email, content : contact.content
+        //         }
+        //     }).then(function(success){
+        //         window.alert('Đăng ký thành công!');
+        //         $("#before-send").hide();
+        //         $('.btn-contact').prop('disabled', false);
+        //     }, function(error){
+
+        //     });
+        // };
         
     })
         
