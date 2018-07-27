@@ -55,15 +55,9 @@
                                     Category
                                 </div>
                                 <ul class="list-group">
-                                    <li class="list-group-item">
-                                        <a href="#">
-                                            Category link
-                                        </a>
-                                    </li>
-
-                                    <li class="list-group-item active">
-                                        <a href="#">
-                                            Category link
+                                    <li class="list-group-item" ng-class="{active : category.slug === slug}" ng-repeat="category in categories">
+                                        <a href="{{ url('tin-tuc/') }}<% '/' + category.slug %>" target=_self>
+                                            <% category.title %>
                                         </a>
                                     </li>
                                 </ul>

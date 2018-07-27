@@ -57,6 +57,7 @@ Route::prefix('v1')->group(function() {
         Route::get('fetch_all_blog', 'BlogApiController@fetchAllBlog')->name('blog.fetchAllBlog');
         Route::get('fetch_two_blog', 'BlogApiController@fetchTwoBlog')->name('blog.fetchTwoBlog');
         Route::get('detail_blog', 'BlogApiController@detail')->name('blog_blog.detail');
+        Route::get('fetch_all_categories', 'BlogApiController@fetchAllCategoriesBlog')->name('fetch_all_categories.fetchAllCategoriesBlog');
 
         /**
          * Comment API
