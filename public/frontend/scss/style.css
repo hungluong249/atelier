@@ -1436,6 +1436,13 @@ EMBED STYLE
       border-color: transparent; }
       #news section.list-blogs .container-fluid .container .row .right .panel ul li.active a {
         color: #333; }
+#news section#list-search .container {
+  padding-left: 30px;
+  padding-right: 30px; }
+  #news section#list-search .container .row .item {
+    padding: 15px; }
+    #news section#list-search .container .row .item .inner {
+      background-color: #fff; }
 
 #detail-news .section-header {
   margin-top: 0px; }

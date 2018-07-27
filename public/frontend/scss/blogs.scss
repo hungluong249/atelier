@@ -133,6 +133,23 @@ EMBED STYLE
                 }
             }
         }
+
+        &#list-search{
+            .container{
+                padding-left: 30px;
+                padding-right: 30px;
+
+                .row{
+                    .item{
+                        padding: 15px;
+
+                        .inner{
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
