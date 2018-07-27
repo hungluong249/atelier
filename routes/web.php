@@ -156,9 +156,7 @@ Route::get('/lien-he', function () {
 /**
  * Search route
  */
-Route::get('tim-kiem', function () {
-    return view('search');
-});
+Route::get('tim-kiem', ['as' => 'search', 'uses' => 'SearchController@search']);
 
 /**
  * 404 route

@@ -145,24 +145,26 @@
     </ul>
 </div>
 
-<section class="search-section" id="search-section" ng-show="isVisible">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-10" id="search-input">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Bạn đang tìm kiếm gì...">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
-                            <i class="fa fa-search" aria-hidden="true"></i> Tìm kiếm!
-                        </button>
-                    </span>
-                </div><!-- /input-group -->
-            </div>
-            <div class="col-xs-2" id="close-section">
-                <button class="btn btn-outline" type="submit" ng-click="hideSearch()">
-                    <i class="fa fa-close" aria-hidden="true"></i> Close
-                </button>
+<form class="input-group" action="{{ url('tim-kiem') }}" method="get">
+    <section class="search-section" id="search-section" ng-show="isVisible">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10" id="search-input">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Bạn đang tìm kiếm gì..." name="search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="fa fa-search" aria-hidden="true"></i> Tìm kiếm!
+                            </button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div>
+                <div class="col-xs-2" id="close-section">
+                    <button class="btn btn-outline" type="button" ng-click="hideSearch()">
+                        <i class="fa fa-close" aria-hidden="true"></i> Close
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</form>

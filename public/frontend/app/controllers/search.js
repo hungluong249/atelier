@@ -1,28 +1,19 @@
 (function(){
     app.controller('SearchController', function($scope, $http, $location, API_URL, $sce){
-    	var name = $location.search();
+        $scope.$sce = $sce;
+        $scope.searchResult = [];
+
+    	var searchString = $location.search().search;
+    	console.log(searchString);
         $http({
             method: 'GET',
-            url: API_URL + 'searchAllBlog',
+            url: API_URL + 'search',
             params: {
-                name: name
+                searchString: searchString
             }
         }).then(function(success){
-            $scope.searchBlog = success.data;
-            console.log($scope.searchBlog);
-        }, function(error){
-
-        });
-
-        $http({
-            method: 'GET',
-            url: API_URL + 'searchAllProduct',
-            params: {
-                name: name
-            }
-        }).then(function(success){
-            $scope.searchProduct = success.data;
-            console.log($scope.searchProduct);
+            $scope.searchResult = success.data;
+            console.log($scope.searchResult);
         }, function(error){
 
         });
