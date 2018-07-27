@@ -7,14 +7,6 @@ Họ tên: {{ $name }} <br>
 Email: {{ $email }} <br>
 @endif
 
-@if(isset($phone))
-Phone: {{ $phone }} <br>
-@endif
-
-@if(isset($reason))
-Vấn đề cần tư vấn: {{ $reason }} <br>
-@endif
-
 @if(isset($content))
 Nội dung: {{ $content }} <br>
 @endif
