@@ -110,13 +110,39 @@ section{
 }
 
 @media (max-width: 768px){
-    section {
-        &.section-header {
-            margin-top: 200px;
 
+    #trends{
+        .section-header{
+
+            .container-fluid{
+                .container{
+                    h1{
+                        font-size: 2.75em;
+                        max-height: none;
+                        -webkit-line-clamp: unset;
+                    }
+                }
+
+                .introduce{
+                    padding-bottom: 100px;
+                }
+
+                .cover{
+                    .mask{
+                        height: 250px;
+
+                        -webkit-transform: translateY(-50px);
+                        -moz-transform: translateY(-50px);
+                        -ms-transform: translateY(-50px);
+                        -o-transform: translateY(-50px);
+                        transform: translateY(-50px);
+                    }
+                }
+            }
         }
 
-        &#list-trends {
+        #list-trends {
+
             .container {
                 padding-left: 0px;
                 padding-right: 0px;
@@ -128,6 +154,31 @@ section{
                     &.masonry-brick-2 {
                         height: 350px;
                     }
+                }
+            }
+        }
+    }
+
+    #detail-trend{
+        .section-header {
+            margin-top: 0px;
+
+            .container{
+                h1{
+                    font-size: 2.75em;
+                    max-height: none;
+                    -webkit-line-clamp: unset;
+                }
+            }
+        }
+
+        .container{
+            article{
+                padding-top: 50px;
+                padding-bottom: 50px;
+
+                .masonry-brick{
+                    width: 100%;
                 }
             }
         }

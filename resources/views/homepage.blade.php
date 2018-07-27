@@ -6,6 +6,12 @@
     <!-- OWL CAROUSEL -->
     <link href="{{ asset("public/frontend/lib/owl-carousel/css/owl.carousel.min.css")}}" rel="stylesheet" type="text/css" />
 
+    <style>
+        footer.footer{
+            display: none;
+        }
+    </style>
+
     <div id="homepage" ng-controller="HomepageController">
 
         <div id="fullpage">
@@ -135,12 +141,14 @@
 
                                 <li>
                                     <div class="inner">
-                                        <div class="icon">
-                                            <i class="fa fa-plus fa-2x" aria-hidden="false"></i>
-                                        </div>
-                                        <div class="title">
-                                            <h4>Sản phẩm khác</h4>
-                                        </div>
+                                        <a href="{{ url('san-pham') }}" target="_self">
+                                            <div class="icon">
+                                                <i class="fa fa-plus fa-2x" aria-hidden="false"></i>
+                                            </div>
+                                            <div class="title">
+                                                <h4>Sản phẩm khác</h4>
+                                            </div>
+                                        </a>
                                     </div>
                                 </li>
                             </ul>
@@ -150,7 +158,8 @@
 
             </div>
 
-            <div class="section" id="trends" style="background-image: url('{{ asset('public/frontend/img/demo-trends.jpg') }}');">
+            <div class="section" id="trends">
+                <div class="background" style="background-image: url('{{ asset('public/frontend/img/demo-trends.jpg') }}');"></div>
                 <div class="container">
                     <div class="heading hidden-xs">
                         <h1 class="heading light">Xu hướng</h1>

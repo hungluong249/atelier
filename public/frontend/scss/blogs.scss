@@ -115,21 +115,45 @@ EMBED STYLE
 
         .container-fluid{
 
-            .introduce{
-                padding-bottom: 100px;
+            .container{
+                h1{
+                    padding-left: 145px;
+                }
             }
         }
     }
 
     .container{
         article{
-            padding-top: 100px;
-            padding-bottom: 100px;
+            padding: 100px 150px;
 
-            .masonry-brick{
-                width: 33%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
 
-                padding: 10px;
+@media (max-width: 768px) {
+    #detail-news{
+        .section-header{
+            .container-fluid{
+
+                .container{
+                    h1{
+                        font-size: 2.75em;
+                        max-height: none;
+                        -webkit-line-clamp: unset;
+
+                        padding-left: 0px;
+                    }
+                }
+            }
+        }
+
+        .container{
+            article{
+                padding: 50px 0px;
 
                 img{
                     width: 100%;
