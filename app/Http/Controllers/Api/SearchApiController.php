@@ -15,10 +15,6 @@ class SearchApiController extends Controller
 
     public function search(){
         $text = Input::get('searchString');
-//        $result = DB::select('SELECT * FROM blog where title LIKE ?', [$text]);
-
-
-
 
         $blog = DB::table('blog')->select('title', 'slug', 'description', DB::raw('null as name'), 'description', DB::raw('99 as target'))
             ->where('title', 'LIKE', '%' . $text . '%')
@@ -33,11 +29,6 @@ class SearchApiController extends Controller
             ->where('is_deleted', '=', 0);
 
         $result = $blog->unionAll($trend)->unionAll($product)->get();
-
-
-
-
-
 
         if(!$result){
             return response()->json('No item found', 404);
