@@ -21,6 +21,8 @@ Author: hung.luong@matocreative.vn
 
     #list-product{
         .container{
+            padding-top: 100px;
+
             padding-left: 0;
             padding-right: 0;
 
@@ -88,6 +90,55 @@ Author: hung.luong@matocreative.vn
                 padding: 10px;
 
                 img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #product{
+        .section-header{
+            .container-fluid{
+                .container{
+                    h1{
+                        font-size: 2.75em;
+                        max-height: none;
+                        -webkit-line-clamp: unset;
+                    }
+                }
+            }
+        }
+
+        #list-product{
+            .container{
+                .masonry-brick{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #detail-product{
+        .section-header{
+            .container-fluid{
+                .container{
+                    h1{
+                        font-size: 2.75em;
+                        max-height: none;
+                        -webkit-line-clamp: unset;
+                    }
+                }
+            }
+        }
+
+        .container{
+            article{
+                padding-top: 50px;
+                padding-bottom: 50px;
+
+                .masonry-brick{
                     width: 100%;
                 }
             }
