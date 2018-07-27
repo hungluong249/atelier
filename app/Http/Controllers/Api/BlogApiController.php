@@ -51,6 +51,15 @@ class BlogApiController extends Controller
         return response()->json($result, 200);
     }
 
+    public function fetchAllCategoriesBlog()
+    {
+        $result = BlogCategory::where(['is_deleted' => 0, 'is_active' => 1])->get();
+        if(!$result){
+            return response()->json('No item found', 404);
+        }
+        return response()->json($result, 200);
+    }
+
     public function fetchBlogByCategory(){
         $category = Input::get('category');
 
