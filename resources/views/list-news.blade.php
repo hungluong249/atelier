@@ -26,23 +26,50 @@
             <div class="container-fluid">
                 <div class="container">
                     <div class="row">
-                        <div class="item col-sm-4 col-xs-12" ng-repeat="blog in blogs">
-                            <div class="inner">
-                                <a href="#">
-                                    <div class="mask">
-                                        <img src="{{ asset('storage/app/') }}/<% blog.image %>" alt="image news">
-                                    </div>
-                                </a>
 
-                                <a href="#">
-                                    <h2 class="post-heading dark"><% blog.title %></h2>
-                                </a>
-                                <p class="description"><% blog.description %></p>
-                                <a href="{{ url('tin-tuc/chi-tiet/') }}/<% blog.slug %>" class="btn btn-outline" role="button"  target="_self">
-                                    Xem chi tiết
-                                </a>
+                        <div class="left col-sm-9 col-xs-12">
+                            <div class="row">
+                                <div class="item col-sm-6 col-xs-12" ng-repeat="blog in blogs">
+                                    <div class="inner">
+                                        <a href="#">
+                                            <div class="mask">
+                                                <img src="{{ asset('storage/app/') }}/<% blog.image %>" alt="image news">
+                                            </div>
+                                        </a>
+
+                                        <a href="#">
+                                            <h2 class="post-heading dark"><% blog.title %></h2>
+                                        </a>
+                                        <p class="description"><% blog.description %></p>
+                                        <a href="{{ url('tin-tuc/chi-tiet/') }}/<% blog.slug %>" class="btn btn-outline" role="button"  target="_self">
+                                            Xem chi tiết
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="right col-sm-3 col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Category
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <a href="#">
+                                            Category link
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item active">
+                                        <a href="#">
+                                            Category link
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
