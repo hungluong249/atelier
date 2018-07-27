@@ -1,0 +1,96 @@
+/*
+===================================
+PRODUCT STYLE
+
+Author: hung.luong@matocreative.vn
+
+===================================
+ */
+
+#product{
+    .section-header{
+        margin-top: 0px;
+
+        .container-fluid{
+
+            .introduce{
+                padding-bottom: 100px;
+            }
+        }
+    }
+
+    #list-product{
+        .container{
+            padding-left: 0;
+            padding-right: 0;
+
+            .masonry-brick{
+                width: 33%;
+                height: 400px;
+                float: left;
+
+                margin-bottom: 30px;
+
+                &.masonry-brick-height-2{
+                    height: 450px;
+                }
+
+                .inner{
+                    height: 100%;
+
+                    padding-left: 15px;
+                    padding-right: 15px;
+
+                    .mask{
+                        width: 100%;
+                        height: 100%;
+
+                        position: relative;
+
+                        .content{
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+
+                            width: 75%;
+
+                            padding: 15px 30px;
+
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#detail-product{
+    .section-header{
+        margin-top: 0px;
+
+        .container-fluid{
+
+            .introduce{
+                padding-bottom: 100px;
+            }
+        }
+    }
+
+    .container{
+        article{
+            padding-top: 100px;
+            padding-bottom: 100px;
+
+            .masonry-brick{
+                width: 33%;
+
+                padding: 10px;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

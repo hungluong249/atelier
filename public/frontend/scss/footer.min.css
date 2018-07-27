@@ -1,0 +1,1 @@
+body:before{white-space:pre;font-family:monospace;content:"Error: Undefined variable: \"$gray-dark\".\A         on line 15 of footer.scss\A \A 10: /*\A 11: FOOTER\A 12:  */\A 13: \A 14: footer.footer{\A 15:     background-color: $gray-dark;\A 16:     color: #fff;\A 17: \A 18:     padding-top: 50px;\A 19:     padding-bottom: 100px;\A 20: "}

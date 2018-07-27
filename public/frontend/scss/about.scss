@@ -1,0 +1,132 @@
+/*
+===================================
+ABOUT STYLE
+
+Author: hung.luong@matocreative.vn
+
+===================================
+ */
+
+#about{
+    .cover{
+        width: 100%;
+        height: 60vh;
+
+        .mask{
+            width: 100%;
+            height: 100%;
+
+            position: relative;
+
+            .container{
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                z-index: 2;
+
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+                transform: translateX(-50%);
+
+                padding-bottom: 30px;
+            }
+
+            .overlay{
+                width: 100%;
+                height: 100%;
+
+                background-color: rgba(0,0,0,0.4);
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }
+    }
+
+    .section-header{
+        margin-top: 0;
+
+        .introduce{
+            padding-bottom: 100px;
+        }
+    }
+
+    .section-body{
+        .container{
+            .row{
+                .left{
+                    .wrapper{
+                        padding-top: 30px;
+                        padding-bottom: 30px;
+
+                        .head{
+
+                        }
+
+                        .body{
+                            article{
+                                p{
+                                    max-width: 100% !important;
+                                }
+
+                                img{
+                                    display: block;
+                                    width: 100% !important;
+
+                                    margin-top: 30px;
+                                    margin-bottom: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right{
+                    padding-top: 30px;
+
+                    &.active{
+                        position: sticky;
+                        top: 30px;
+                    }
+
+                    .panel{
+                        .list-group{
+                            .list-group-item{
+                                a{
+                                    color: $gray-light;
+
+                                    &:hover{
+                                        color: $gray-dark;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+    #about{
+        .section-body{
+            .row{
+                display: flex;
+                flex-direction: column;
+
+                .left{
+                    order: 2;
+                }
+
+                .right{
+                    order: 1;
+                }
+            }
+        }
+    }
+}

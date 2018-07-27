@@ -1,0 +1,135 @@
+/*
+===================================
+TRENDS STYLE
+
+Author: hung.luong@matocreative.vn
+
+===================================
+ */
+
+#trends{
+    .section-header{
+        margin-top: 0px;
+
+        .container-fluid{
+
+            .introduce{
+                padding-bottom: 200px;
+            }
+
+            .cover{
+                .mask{
+                    width: 100%;
+                    height: 400px;
+
+                    -webkit-transform: translateY(-150px);
+                    -moz-transform: translateY(-150px);
+                    -ms-transform: translateY(-150px);
+                    -o-transform: translateY(-150px);
+                    transform: translateY(-150px);
+                }
+            }
+        }
+    }
+}
+
+section{
+    &.section-header{
+        margin-top: 200px;
+
+
+    }
+
+    &#list-trends{
+        .container{
+            padding-left: 50px;
+            padding-right: 50px;
+
+            .masonry-brick{
+                width: 33%;
+                height: 400px;
+                float: left;
+
+                margin-bottom: 30px;
+
+                &.masonry-brick-height-2{
+                    height: 450px;
+                }
+
+                .inner{
+                    height: 100%;
+
+                    padding-left: 15px;
+                    padding-right: 15px;
+
+                    .mask{
+                        width: 100%;
+                        height: 100%;
+
+                        position: relative;
+
+                        .content{
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+
+                            width: 75%;
+
+                            padding: 15px 30px;
+
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#detail-trend{
+    .section-header {
+        margin-top: 0px;
+    }
+
+    .container{
+        article{
+            padding-top: 100px;
+            padding-bottom: 100px;
+
+            .masonry-brick{
+                width: 33%;
+
+                padding: 10px;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    section {
+        &.section-header {
+            margin-top: 200px;
+
+        }
+
+        &#list-trends {
+            .container {
+                padding-left: 0px;
+                padding-right: 0px;
+
+                .masonry-brick {
+                    width: 100%;
+                    height: 300px;
+
+                    &.masonry-brick-2 {
+                        height: 350px;
+                    }
+                }
+            }
+        }
+    }
+}

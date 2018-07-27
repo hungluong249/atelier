@@ -1,0 +1,138 @@
+/*
+===================================
+MAIN FONT SETTING FOR ALL PAGES
+
+Author: hung.luong@matocreative.vn
+
+===================================
+ */
+
+/*
+FONTS EMBED
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,900&subset=vietnamese');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/*
+FONT SETTINGS
+ */
+
+h1{
+    &.heading{
+        font-size: 3.75em;
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 1.2;
+        max-height: 4em;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        &.dark{
+            color: $gray-dark;
+        }
+
+        &.light{
+            color: #fff;
+        }
+    }
+}
+
+h2{
+    &.post-heading{
+        font-size: 1.25em;
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 1.2;
+        max-height: 4em;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        &.dark{
+            color: $gray-light;
+        }
+
+        &.light{
+            color: #fff;
+        }
+
+        &.bigger{
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+    }
+}
+
+h4{
+    &.sub-heading{
+        font-size: 1.25em;
+
+        text-transform: uppercase;
+
+        font-weight: 400;
+
+        &.dark{
+            color: $gray-dark;
+        }
+
+        &.light{
+            color: #fff;
+        }
+    }
+
+    &.post-subheading{
+        font-size: 1em;
+
+        text-transform: uppercase;
+
+        font-weight: 400;
+
+        &.dark{
+            color: $gray-dark;
+        }
+
+        &.light{
+            color: #fff;
+        }
+    }
+}
+
+p{
+    &.paragraph{
+        font-size: 1.125em;
+
+        &.dark{
+            color: $gray-dark;
+        }
+
+        &.light{
+            color: #fff;
+        }
+    }
+
+    &.description{
+        font-size: 0.875em;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 1.4;
+        height: 5.4em;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+}

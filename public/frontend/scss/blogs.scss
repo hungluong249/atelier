@@ -1,0 +1,140 @@
+/*
+===================================
+BLOGS STYLE
+
+Author: hung.luong@matocreative.vn
+
+===================================
+ */
+
+/*
+EMBED STYLE
+ */
+
+#news{
+    section{
+        &.section-header {
+            margin-top: 0;
+            
+            .container-fluid {
+                padding-left: 0;
+                padding-right: 0;
+
+                .container {
+                    h1 {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+
+        &.list-blogs{
+            .container-fluid{
+                padding-left: 0;
+                padding-right: 0;
+
+                padding-top: 50px;
+                padding-bottom: 100px;
+
+                background-color: #e7e7e7;
+
+                .container{
+                    padding-left: 30px;
+                    padding-right: 30px;
+
+                    .row{
+                        .item{
+                            height: 450px;
+                            margin-bottom: 30px;
+
+                            .inner{
+                                height: 100%;
+                                background-color: #fff;
+
+                                -webkit-transform: translateY(0);
+                                -moz-transform: translateY(0);
+                                -ms-transform: translateY(0);
+                                -o-transform: translateY(0);
+                                transform: translateY(0);
+
+                                @include transition(500ms);
+
+                                .mask{
+                                    width: 100%;
+                                    height: 200px;
+
+                                }
+
+                                h2.post-heading{
+                                    margin-bottom: 30px;
+
+                                    padding-left: 15px;
+                                    padding-right: 15px;
+                                }
+
+                                p.description{
+                                    color: $gray-light;
+                                    margin-bottom: 30px;
+
+                                    padding-left: 15px;
+                                    padding-right: 15px;
+                                }
+
+                                a.btn-outline{
+                                    margin-left: 15px;
+                                }
+                            }
+
+                            &:hover{
+                                .inner{
+                                    -webkit-box-shadow:  0 4px 15px $gray;
+                                    -moz-box-shadow:  0 4px 15px $gray;
+                                    box-shadow:  0 4px 15px $gray;
+
+                                    -webkit-transform: translateY(-5px);
+                                    -moz-transform: translateY(-5px);
+                                    -ms-transform: translateY(-5px);
+                                    -o-transform: translateY(-5px);
+                                    transform: translateY(-5px);
+
+                                    @include transition(500ms);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#detail-news{
+    .section-header{
+        margin-top: 0px;
+
+        .container-fluid{
+
+            .introduce{
+                padding-bottom: 100px;
+            }
+        }
+    }
+
+    .container{
+        article{
+            padding-top: 100px;
+            padding-bottom: 100px;
+
+            .masonry-brick{
+                width: 33%;
+
+                padding: 10px;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

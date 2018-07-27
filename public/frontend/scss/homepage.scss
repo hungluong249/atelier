@@ -1,0 +1,1124 @@
+/*
+===================================
+HOMEPAGE STYLE
+
+Author: hung.luong@matocreative.vn
+
+===================================
+ */
+
+header.header{
+
+}
+
+.nav-side{
+
+}
+
+#homepage{
+    #fullpage{
+        .section{
+            width: 100%;
+            height: 100vh;
+
+            position: relative;
+
+            .title-side{
+                width: 100vh;
+                height: 100px;
+
+                position: absolute;
+                bottom: 100%;
+                left: 20px;
+
+                text-align: center;
+
+                -webkit-transform: rotateZ(90deg);
+                -moz-transform: rotateZ(90deg);
+                -ms-transform: rotateZ(90deg);
+                -o-transform: rotateZ(90deg);
+                transform: rotateZ(90deg);
+
+                -webkit-transform-origin: bottom left;
+                -moz-transform-origin: bottom left;
+                -ms-transform-origin: bottom left;
+                -o-transform-origin: bottom left;
+                transform-origin: bottom left;
+
+                h1{
+                    font-size: 9.375em;
+                    font-weight: 700;
+
+                    text-transform: uppercase;
+
+                    color: #ccc;
+                }
+            }
+
+            &#slider{
+                .slide{
+
+                    .carousel-inner{
+                        .item{
+                            .mask{
+                                width: 100%;
+                                height: 100vh;
+                                overflow: hidden;
+                            }
+
+                            .carousel-caption{
+                                width: 50%;
+
+                                left: 0;
+                                top: 50%;
+
+                                text-align: left;
+
+                                padding-top: 100px;
+                                padding-bottom: 100px;
+                                padding-left: 100px;
+
+                                -webkit-transform: translateY(-50%);
+                                -moz-transform: translateY(-50%);
+                                -ms-transform: translateY(-50%);
+                                -o-transform: translateY(-50%);
+                                transform: translateY(-50%);
+
+                                text-shadow: 2px 2px 5px #666;
+
+                                p.paragraph{
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    line-height: 1.5;
+                                    max-height: 6em;
+                                    -webkit-line-clamp: 4;
+                                    -webkit-box-orient: vertical;
+                                }
+                            }
+                        }
+                    }
+
+                    .carousel-indicators{
+                        top: 50%;
+                        left: 0;
+
+                        padding-top: 100px;
+                        padding-bottom: 100px;
+                        padding-left: 100px;
+
+                        width: 50%;
+                        margin-left: 0;
+
+                        text-align: left;
+
+                        li{
+                            border-radius: 0px;
+                            width: 180px;
+                            height: 220px;
+
+                            position: relative;
+
+                            .icon{
+                                width: 100%;
+                                padding: 15px;
+                            }
+                        }
+                    }
+
+                    .slide-control{
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+
+                        z-index: 1009;
+
+                        width: 50%;
+
+                        padding-top: 100px;
+                        padding-bottom: 100px;
+                        padding-left: 100px;
+
+                        margin-left: -15px;
+
+                        list-style: none;
+
+                        li{
+                            width: 30%;
+                            height: 25vh;
+
+                            padding: 0 15px;
+
+                            border-radius: 0px;
+
+                            display: inline-block;
+
+                            color: #fff;
+
+                            .inner{
+                                height: 100%;
+
+                                border: 2px solid #fff;
+
+                                position: relative;
+
+                                .icon{
+                                    width: 100%;
+                                    padding: 15px;
+
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                }
+
+                                .title{
+                                    width: 100%;
+                                    padding: 15px;
+
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+
+                                    h4{
+                                        font-size: 1em;
+                                        text-transform: uppercase;
+
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: -webkit-box;
+                                        line-height: 1.2;
+                                        height: 2.4em;
+                                        -webkit-line-clamp: 2;
+                                        -webkit-box-orient: vertical;
+                                    }
+                                }
+                            }
+
+                            &:hover{
+                                .inner{
+                                    background-color: #fff;
+                                    color: $gray-dark;
+
+                                    cursor: pointer;
+                                }
+                            }
+
+                            &.active{
+
+                            }
+
+                        }
+                    }
+
+                }
+
+
+
+                .fp-controlArrow{
+                    display: none;
+                }
+
+                .slider{
+
+                }
+            }
+
+            &#about{
+                background-image: url("../img/pattern.png");
+                background-size: cover;
+                background-position: center center;
+                background-blend-mode: overlay;
+
+                .container{
+                    .row{
+                        .left{
+                            .head{
+                                h1{
+                                    color: $gray;
+                                }
+                            }
+
+                            .body{
+                                p{
+                                    color: $gray-light;
+                                }
+
+                                ol{
+                                    li{
+                                        font-size: 1.125em;
+
+                                        a{
+                                            color: $gray;
+
+                                            &:hover{
+                                                color: $gray-dark;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .right{
+                            position: relative;
+
+                            .mask{
+                                width: 100%;
+                                height: 400px;
+
+                                position: absolute;
+
+                                -webkit-box-shadow: 3px 3px 10px #333333;
+                                -moz-box-shadow: 3px 3px 10px #333333;
+                                box-shadow: 3px 3px 10px #333333;
+
+                                &#image-top{
+                                    top: 0px;
+                                    left: 150px;
+
+                                    z-index: 2;
+                                }
+
+                                &#image-bottom{
+                                    top: 150px;
+                                    left: 70px;
+
+                                    z-index: 1;
+
+                                    &:hover{
+                                        z-index: 3;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &#product{
+                .container-fluid{
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    .row{
+                        .left{
+                            #slider-product{
+                                .carousel-inner{
+                                    .item{
+                                        .mask{
+                                            width: 100%;
+                                            height: 100vh;
+                                        }
+
+                                        .carousel-caption{
+                                            position: absolute;
+                                            bottom: 50px;
+                                            left: 50px;
+
+                                            right: auto;
+                                            top: auto;
+
+                                            text-align: left;
+
+                                            h1{
+                                                margin-bottom: 30px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .right{
+                            padding-top: 20vh;
+
+                            padding-left: 30px;
+                            padding-right: 30px;
+
+                            .slide-control{
+                                list-style: none;
+
+                                li{
+                                    width: 30%;
+                                    height: 30vh;
+
+                                    display: inline-block;
+
+                                    padding: 15px;
+
+                                    .inner{
+                                        position: relative;
+
+                                        height: 100%;
+
+                                        border-radius: 0px;
+                                        border: 2px solid $gray-dark;
+
+                                        color: $gray-dark;
+
+                                        .icon{
+                                            width: 100%;
+                                            padding: 15px;
+
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                        }
+
+                                        .title{
+                                            width: 100%;
+                                            padding: 15px;
+
+                                            position: absolute;
+                                            bottom: 0;
+                                            left: 0;
+
+                                            h4{
+                                                font-size: 1em;
+                                                text-transform: uppercase;
+
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                display: -webkit-box;
+                                                line-height: 1.2;
+                                                height: 2.4em;
+                                                -webkit-line-clamp: 2;
+                                                -webkit-box-orient: vertical;
+                                            }
+                                        }
+                                    }
+
+                                    &:hover, &.active{
+                                        .inner{
+                                            background-color: $gray-dark;
+                                            color: #fff;
+
+                                            cursor: pointer;
+                                        }
+                                    }
+
+                                    &.active{
+
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &#trends{
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+
+                .container{
+                    .heading{
+                        margin-bottom: 30px;
+                    }
+
+                    .row{
+                        .item{
+                            //width: 180px;
+                            height: 27vh;
+                            padding: 15px;
+
+                            .inner{
+                                height: 100%;
+
+                                border-radius: 0px;
+                                border: 2px solid #fff;
+
+                                position: relative;
+
+                                a{
+                                    color: #fff;
+                                }
+
+                                .icon{
+                                    width: 100%;
+                                    padding: 15px;
+
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                }
+
+                                .title{
+                                    width: 100%;
+                                    padding: 15px;
+
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+
+                                    h4{
+                                        font-size: 1em;
+                                        text-transform: uppercase;
+
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: -webkit-box;
+                                        line-height: 1.2;
+                                        height: 2.4em;
+                                        -webkit-line-clamp: 2;
+                                        -webkit-box-orient: vertical;
+                                    }
+                                }
+                            }
+
+
+
+                            &:last-of-type{
+                                .inner{
+                                    background-color: #fff;
+
+                                    a{
+                                        color: $gray-dark;
+                                    }
+                                }
+                            }
+
+                            &:hover{
+                                cursor: pointer;
+                                
+                                .inner{
+                                    background-color: #fff;
+
+                                    a{
+                                        color: $gray-dark;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            /* TEMPORARY DELETE
+            &#creative{
+                .container{
+                    .row{
+                        .right{
+                            .head{
+                                h1{
+                                    color: $gray;
+                                }
+                            }
+
+                            .body{
+                                p{
+                                    color: $gray-light;
+                                }
+
+                                ol{
+                                    li{
+                                        font-size: 1.125em;
+
+                                        a{
+                                            color: $gray;
+
+                                            &:hover{
+                                                color: $gray-dark;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            */
+
+            &#news{
+
+                background-color: #fafafa;
+                .container{
+                    .row{
+                        .left{
+                            #cover{
+                                padding-bottom: 30px;
+
+                                .mask{
+                                    width: 100%;
+                                    height: 45vh;
+
+                                    position: relative;
+
+                                    h1{
+                                        position: absolute;
+                                        bottom: 30px;
+                                        left: 30px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .right{
+                            .row{
+                                .item{
+                                    height: 45vh;
+
+                                    padding-left: 15px;
+                                    padding-right: 15px;
+
+                                    .inner{
+                                        height: 100%;
+                                        background-color: #fff;
+
+                                        @include transition(500ms);
+
+                                        .mask{
+                                            width: 100%;
+                                            height: 200px;
+
+                                        }
+
+                                        h2.post-heading{
+                                            margin-bottom: 30px;
+
+                                            padding-left: 15px;
+                                            padding-right: 15px;
+                                        }
+
+                                        p.description{
+                                            color: $gray-light;
+                                            margin-bottom: 30px;
+
+                                            padding-left: 15px;
+                                            padding-right: 15px;
+                                        }
+
+                                        a.btn-outline{
+                                            margin-left: 15px;
+                                        }
+                                    }
+
+                                    &:hover{
+                                        .inner{
+                                            -webkit-box-shadow:  0 4px 15px #000;
+                                            -moz-box-shadow:  0 4px 15px #000;
+                                            box-shadow:  0 4px 15px #000;
+
+                                            @include transition(500ms);
+                                        }
+                                    }
+                                }
+
+                                .owl-carousel{
+                                    .owl-nav{
+                                        padding-top: 30px;
+                                        button{
+                                            padding: 5px 15px !important;
+                                            background-color: #ccc;
+
+                                            margin-right: 15px;
+
+                                            font-size: 1.5em;
+
+                                            &:first-of-type{
+                                                margin-left: 15px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &#contact{
+                background-image: url("../img/pattern.png");
+                background-size: cover;
+                background-position: center center;
+                background-blend-mode: overlay;
+
+                .container{
+
+                    h2{
+                        font-size: 1.5em;
+                        font-weight: 700;
+
+                        text-transform: uppercase;
+                    }
+
+                    b{
+                        font-size: 1em;
+                        font-weight: 500;
+
+                        text-transform: uppercase;
+                    }
+
+                    p{
+                        font-size: 1em;
+                        font-weight: 400;
+
+                        color: $gray-light;
+                    }
+
+                    a{
+                        color: $gray-light;
+
+                        &:hover{
+                            color: $gray-dark;
+                        }
+                    }
+
+                    .row{
+                        .map{
+
+                        }
+
+                        .left{
+
+                        }
+
+                        .right{
+                            .row{
+                                .form-group{
+                                    .form-control{
+                                        -webkit-border-radius: 0;
+                                        -moz-border-radius: 0;
+                                        border-radius: 0;
+
+                                        border: none;
+                                        border-bottom: 1px solid #e7e7e7;
+
+                                        box-shadow: none;
+
+                                        color: $gray-dark;
+
+                                        background-color: transparent;
+                                    }
+
+                                    textarea{
+                                        resize: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer.footer{
+    display: none;
+}
+
+// SMALL DESKTOPs
+
+@media (max-width: 1600px) and (min-width: 992px) {
+    #homepage {
+        #fullpage {
+            .section{
+                .title-side{
+                    left: -15px;
+
+                    h1{
+                        font-size: 7em;
+
+                        color: #eaeaea;
+                    }
+                }
+
+                &#slider{
+                    .slide{
+                        .carousel-inner{
+                            .item{
+                                .carousel-caption{
+                                    width: 75%;
+                                    top: 45%;
+                                    padding-left: 30px;
+                                }
+                            }
+                        }
+
+                        .slide-control{
+                            width: 75%;
+                            padding-left: 30px;
+
+                            li{
+                                width: 25%;
+                                height: 150px;
+                            }
+                        }
+                    }
+                }
+
+                &#about{
+                    .container{
+                        .row{
+                            .right{
+                                .mask{
+                                    width: 100%;
+                                    height: 400px;
+
+                                    &#image-top{
+                                        top: 0px;
+                                        left: 30px;
+
+                                        z-index: 2;
+                                    }
+
+                                    &#image-bottom{
+                                        top: 80px;
+                                        left: 0px;
+
+                                        z-index: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#product{
+                    .container-fluid{
+                        .row{
+                            .right{
+                                .slide-control{
+                                    li{
+                                        width: 48%;
+                                        height: 25vh;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#trends{
+                    .container{
+                        .heading{
+                            padding-top: 30px;
+                            margin-bottom: 15px;
+                        }
+
+                        .row{
+                            padding-top: 15px;
+
+                            .item{
+                                height: 25vh;
+                            }
+                        }
+                    }
+                }
+
+                /*
+                &#creative{
+                    .container{
+                        .row{
+                            .right{
+                                .body{
+                                    p{
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: -webkit-box;
+                                        line-height: 1.2;
+                                        height: 7em;
+                                        -webkit-line-clamp: 6;
+                                        -webkit-box-orient: vertical;
+                                    }
+
+                                    ol{
+                                        li{
+                                            font-size: 1.125em;
+
+                                            a{
+                                                color: $gray;
+
+                                                &:hover{
+                                                    color: $gray-dark;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                */
+
+                &#news{
+                    .container{
+                        .row{
+                            .left{
+                                  #cover{
+                                      .mask{
+                                          height: 50vh;
+                                      }
+                                  }
+                            }
+
+                            .right{
+                                .row{
+                                    .item{
+                                        height: 50vh;
+
+                                        .inner{
+                                            .mask{
+                                                height: 100px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#contact{
+                    .container{
+
+                        h2{
+                            font-size: 1.5em;
+                            font-weight: 700;
+
+                            text-transform: uppercase;
+                        }
+
+                        b{
+                            font-size: 1em;
+                            font-weight: 500;
+
+                            text-transform: uppercase;
+                        }
+
+                        p{
+                            font-size: 1em;
+                            font-weight: 400;
+
+                            color: $gray-light;
+                        }
+
+                        .row{
+                            .map{
+                                iframe{
+                                    height: 190px !important;
+                                }
+
+                            }
+
+                            .left{
+
+                            }
+
+                            .right{
+                                .row{
+                                    .form-group{
+                                        .form-control{
+
+                                        }
+
+                                        textarea{
+                                            resize: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// SMALL DEVICEs (MOBILE)
+@media (max-width: 768px){
+    #homepage {
+        #fullpage {
+            .section{
+                .title-side{
+                    left: -15px;
+
+                    h1{
+                        font-size: 7em;
+
+                        color: #eaeaea;
+                    }
+                }
+
+                &#slider{
+                    .slide{
+                        .carousel-inner{
+                            .item{
+                                .carousel-caption{
+                                    width: 100%;
+                                    top: 40%;
+                                    padding-left: 30px;
+                                }
+                            }
+                        }
+
+                        .slide-control{
+                            width: 100%;
+                            padding-left: 30px;
+
+                            li{
+                                width: 32%;
+                                height: 130px;
+                            }
+                        }
+                    }
+                }
+
+                &#about{
+
+                }
+
+                &#product{
+                    .container-fluid{
+                        .row{
+                            .right{
+                                .slide-control{
+                                    li{
+                                        width: 48%;
+                                        height: 25vh;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#trends{
+                    .container{
+                        .row{
+                            padding-top: 50px;
+
+                            .item{
+                                height: 25vh;
+                            }
+                        }
+                    }
+                }
+
+                &#news{
+                    .container{
+                        .row{
+                            .right{
+                                .row{
+                                    .item{
+                                        height: auto;
+                                        margin-bottom: 15px;
+                                        padding-left: 15px;
+                                        padding-right: 15px;
+
+                                        .inner{
+                                            padding-bottom: 15px;
+
+                                            .mask{
+                                                height: 150px;
+
+                                            }
+
+                                            h2.post-heading{
+                                                margin-bottom: 15px;
+                                            }
+
+                                            a.btn-outline{
+                                                margin-left: 15px;
+                                            }
+                                        }
+
+                                        &:hover{
+                                            .inner{
+                                                -webkit-box-shadow:  0 4px 15px #000;
+                                                -moz-box-shadow:  0 4px 15px #000;
+                                                box-shadow:  0 4px 15px #000;
+
+                                                @include transition(500ms);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .slide-control{
+                            margin-top: 0px;
+                        }
+                    }
+                }
+
+                &#contact{
+                    background-image: url("../img/pattern.png");
+                    background-size: cover;
+                    background-position: center center;
+                    background-blend-mode: overlay;
+
+                    .container{
+
+                        h2{
+                            font-size: 1.5em;
+                            font-weight: 700;
+
+                            text-transform: uppercase;
+                        }
+
+                        b{
+                            font-size: 1em;
+                            font-weight: 500;
+
+                            text-transform: uppercase;
+                        }
+
+                        p{
+                            font-size: 1em;
+                            font-weight: 400;
+
+                            color: $gray-light;
+                        }
+
+                        .row{
+                            .map{
+                                iframe{
+                                    height: 190px !important;
+                                }
+
+                            }
+
+                            .left{
+
+                            }
+
+                            .right{
+                                .row{
+                                    .form-group{
+                                        .form-control{
+                                            -webkit-border-radius: 0;
+                                            -moz-border-radius: 0;
+                                            border-radius: 0;
+
+                                            border: none;
+                                            border-bottom: 1px solid #e7e7e7;
+
+                                            box-shadow: none;
+
+                                            color: #e7e7e7;
+
+                                            background-color: transparent;
+                                        }
+
+                                        textarea{
+                                            resize: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

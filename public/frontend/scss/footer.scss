@@ -1,0 +1,28 @@
+/*
+===================================
+STYLE FOR FOOTER
+
+Author: hung.luong@matocreative.vn
+
+===================================
+ */
+
+/*
+FOOTER
+ */
+
+footer.footer{
+    background-color: $gray-dark;
+    color: #fff;
+
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+    a{
+        color: $gray;
+
+        &:hover{
+            color: #fff;
+        }
+    }
+}

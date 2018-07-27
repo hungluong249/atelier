@@ -1,0 +1,44 @@
+/*
+===================================
+RESET DEFAULT STYLE OF BOOTSTRAP
+
+Author: hung.luong@matocreative.vn
+
+===================================
+ */
+
+/*
+RESET BOOTSTRAP
+ */
+
+a{
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+ul{
+    padding-left: 0;
+}
+
+.btn-primary{
+    @include gradient-metal;
+    border: none;
+
+    padding: 10px 20px;
+
+    &:focus{
+        @include gradient-metal;
+    }
+
+    &:active{
+        @include gradient-metal;
+    }
+}
+
+.btn-outline{
+    color: $gray;
+
+    border-radius: 7px;
+    border: 1px solid $gray;
+}
