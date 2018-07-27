@@ -25,7 +25,7 @@
                                 <label for="description" class="col-md-2 control-label">Giới thiệu</label>
                                     
                                 <div class="col-md-8">
-                                    <textarea id="description" rows="10" class="form-control" name="description" value="{{ old('description') }}" >{{ $detail->description }}</textarea>
+                                    <textarea id="description" rows="10" class="form-control tinymce" name="description" value="{{ old('description') }}" >{{ $detail->description }}</textarea>
                                     @if ($errors->has('description'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('description') }}</strong>

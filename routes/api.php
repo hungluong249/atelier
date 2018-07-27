@@ -130,5 +130,8 @@ Route::prefix('v1')->group(function() {
 
         //company route
         Route::get('company', 'CompanyController@fetchCompany')->name('company.fetchCompany');
+
+        //Intro product route
+        Route::get('intro-product', 'IntroProductApiController@fetchIntroProduct');
     });
 });

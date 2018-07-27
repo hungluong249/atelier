@@ -13,7 +13,6 @@
             }
         }).then(function(success){
             $scope.detail = success.data;
-            console.log($scope.detail);
         }, function(error){
 
         });
