@@ -138,7 +138,7 @@ Route::get('xac-nhan-thu-ruou', function(){
  * Frontend blog routes
  */
 
-Route::get('/tin-tuc', function () {
+Route::get('/tin-tuc/{target?}', function () {
     return view('list-news');
 });
 

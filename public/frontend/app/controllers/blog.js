@@ -2,8 +2,8 @@
     app.controller('BlogController', function($scope, $http, $location, API_URL, listAdvisesFactory, listNewsFactory){
         $scope.blogs = [];
         $urlSplit = $location.path().split("/");
-        slug = $urlSplit[4];
-        if(!$urlSplit[4]){
+        slug = $urlSplit[3];
+        if(!$urlSplit[3]){
             slug = '';
         }
         $scope.slug = slug;
@@ -14,9 +14,11 @@
         $http({
             method: 'GET',
             url: API_URL + 'fetch_all_blog',
+            params: {
+                    slug: slug
+                }
         }).then(function(success){
             $scope.blogs = success.data;
-            console.log($scope.blogs);
         }, function(error){
 
         });
