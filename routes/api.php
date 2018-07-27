@@ -118,8 +118,7 @@ Route::prefix('v1')->group(function() {
         Route::get('sendMailQuotation', 'QuotationApiController@sendMail');
 
         //search routes
-        Route::get('searchAllBlog', 'SearchApiController@searchAllBlog');
-        Route::get('searchAllProduct', 'SearchApiController@searchAllProduct');
+        Route::get('search', 'SearchApiController@search');
 
         //trend routes
         Route::get('trend-category', 'TrendApiController@fetchAllTrendCategory')->name('trend-category.fetchAllTrendCategory');

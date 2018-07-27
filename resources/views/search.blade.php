@@ -21,25 +21,22 @@
             </div>
         </section>
 
-        <section id="list-news" class="list-blogs" ng-controller="BlogController">
+        <section id="list-news" class="list-blogs" ng-controller="SearchController">
             <div class="container-fluid">
                 <div class="container">
                     <div class="row">
-                        <div class="item col-sm-4 col-xs-12" ng-repeat="blog in blogs">
-                            <div class="inner">
-                                <a href="#">
-                                    <div class="mask">
-                                        <img src="{{ asset('storage/app/') }}/<% blog.image %>" alt="image news">
-                                    </div>
-                                </a>
-
-                                <a href="#">
-                                    <h2 class="post-heading dark"><% blog.title %></h2>
-                                </a>
-                                <p class="description"><% blog.description %></p>
-                                <a href="{{ url('tin-tuc/chi-tiet/') }}/<% blog.slug %>" class="btn btn-outline" role="button"  target="_self">
-                                    Xem chi tiết
-                                </a>
+                        <div class="item col-sm-4 col-xs-12" ng-repeat="item in searchResult">
+                            <div ng-show="item.target == 99" >
+                                <a href="http://localhost/atelier/tin-tuc/chi-tiet/<% item.slug %>" target="_self">[Tin tức] <% item.title %></a>
+                                <p class="paragraph"  ng-bind-html="$sce.trustAsHtml(item.description)"></p>
+                            </div>
+                            <div ng-show="item.target == 98" >
+                                <a href="http://localhost/atelier/xu-huong/chi-tiet/<% item.slug %>" target="_self">[Xu hướng] <% item.title %></a>
+                                <p class="paragraph"  ng-bind-html="$sce.trustAsHtml(item.description)"></p>
+                            </div>
+                            <div ng-show="item.target == 97" >
+                                <a href="http://localhost/atelier/san-pham/chi-tiet/<% item.slug %>" target="_self">[Sản phẩm] <% item.name %></a>
+                                <p class="paragraph"  ng-bind-html="$sce.trustAsHtml(item.description)"></p>
                             </div>
                         </div>
                     </div>
