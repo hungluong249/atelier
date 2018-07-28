@@ -298,5 +298,9 @@ Route::prefix('admin')->group(function() {
         //Intro product route
         Route::resource('intro-product', 'IntroProductController');
         Route::post('intro-product/update/{id}', 'IntroProductController@update')->name('intro-product.update');
+
+        //About overview route
+        Route::resource('about-overview', 'AboutOverviewController');
+        Route::post('about-overview/update/{id}', 'AboutOverviewController@update')->name('about-overview.update');
     });
 });
