@@ -12,6 +12,7 @@
         $scope.blog = [];
         $scope.company = [];
         $scope.banners = [];
+        $scope.aboutOverView = [];
     
         $scope.owlOptions = {
             nav: true,
@@ -93,6 +94,17 @@
             url: API_URL + 'banner'
         }).then(function (success) {
             $scope.banners = success.data;
+        }, function (error) {
+        
+        });
+
+        // Fetch about overview
+        $http({
+            method: 'GET',
+            url: API_URL + 'about-overview'
+        }).then(function (success) {
+            $scope.aboutOverView = success.data;
+            console.log($scope.aboutOverView);
         }, function (error) {
         
         });

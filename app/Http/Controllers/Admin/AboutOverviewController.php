@@ -132,9 +132,10 @@ class AboutOverviewController extends Controller
 
     private function validateInput($request) {
         $this->validate($request, [
-            'description' => 'required',
+            'description' => 'required|max:500',
         ], [
             'description.required' => 'Giới thiệu không được trống.',
+            'description.max' => 'Giới thiệu không được quá 500 kí tự.'
         ]);
     }
 }
