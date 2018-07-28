@@ -136,5 +136,8 @@ Route::prefix('v1')->group(function() {
 
         //banner route
         Route::get('banner', 'BannerApiController@fetchBanners');
+
+        //About overview route
+        Route::get('about-overview', 'AboutOverviewApiController@fetchAboutOverview');
     });
 });

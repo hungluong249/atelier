@@ -61,7 +61,7 @@
                                 <h1 class="heading">Về chúng tôi</h1>
                             </div>
                             <div class="body">
-                                <p class="paragraph">Artelier 31 ra đời là sự kết tinh giữa Bedekor VN (TP HCM) và Công ty cổ phần Homecons (Hanoi).</p>
+                                <p class="paragraph"><% aboutOverView.description %></p>
                                 <ol>
                                     <li>
                                         <a href="{{ url('gioi-thieu#tong-quan') }}" target="_self">Tổng quan</a>
@@ -82,10 +82,10 @@
                         </div>
                         <div class="right col-sm-8 hidden-xs">
                             <div class="mask wow fadeInUp" id="image-top">
-                                <img src="{{ asset('public/frontend/img/demo-about-1.jpg') }}" alt="image about 1">
+                                <img src="{{ asset('storage/app/about-overview') }}<% '/' + aboutOverView.image_one %>" alt="image about 1">
                             </div>
                             <div class="mask wow fadeInUp" id="image-bottom">
-                                <img src="{{ asset('public/frontend/img/demo-about-2.jpg') }}" alt="image about 2">
+                                <img src="{{ asset('storage/app/about-overview') }}<% '/' + aboutOverView.image_two %>" alt="image about 2">
                             </div>
                         </div>
                     </div>
