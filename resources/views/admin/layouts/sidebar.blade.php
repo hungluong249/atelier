@@ -20,13 +20,6 @@
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
         <!-- Optionally, you can add icons to the links -->
-        <li class="treeview {{(Request::segment(2) == 'company')? 'active' : '' }}">
-          <a href="{{ url('admin/company') }}"><i class="fa fa-link"></i> <span>Thông tin Công Ty</span>
-            <span class="pull-right-container">
-            </span>
-          </a>
-        </li>
-
         <li class="treeview {{(Request::segment(2) == 'banner')? 'active' : '' }}">
           <a href="{{ url('admin/banner') }}"><i class="fa fa-link"></i> <span>Banner</span>
             <span class="pull-right-container">
@@ -34,8 +27,33 @@
           </a>
         </li>
 
+        <!--
         <li class="treeview {{(Request::segment(2) == 'introduce')? 'active' : '' }}">
           <a href="{{ url('admin/introduce') }}"><i class="fa fa-link"></i> <span>Danh sách bài viết giới thiệu</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
+        -->
+
+        <li class="treeview {{(Request::segment(2) == 'introduce')? 'active' : '' }}">
+          <a href="#"><i class="fa fa-link"></i> <span>Giới thiệu</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="{{(Request::segment(2) == 'about-overview')? 'active' : '' }}">
+              <a href="{{ url('admin/about-overview') }}">Overview</a>
+            </li>
+            <li class="{{(Request::segment(2) == 'introduce')? 'active' : '' }}">
+              <a href="{{ url('admin/introduce') }}">Danh sách bài viết giới thiệu</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="treeview {{(Request::segment(2) == 'intro-product')? 'active' : '' }}">
+          <a href="{{ url('admin/intro-product') }}"><i class="fa fa-link"></i> <span>Giới thiệu sản phẩm</span>
             <span class="pull-right-container">
             </span>
           </a>
@@ -43,13 +61,6 @@
 
         <li class="treeview {{(Request::segment(2) == 'library')? 'active' : '' }}">
           <a href="{{ url('admin/library') }}"><i class="fa fa-link"></i> <span>Quản lý sản phẩm</span>
-            <span class="pull-right-container">
-            </span>
-          </a>
-        </li>
-
-        <li class="treeview {{(Request::segment(2) == 'intro-product')? 'active' : '' }}">
-          <a href="{{ url('admin/intro-product') }}"><i class="fa fa-link"></i> <span>Giới thiệu sản phẩm</span>
             <span class="pull-right-container">
             </span>
           </a>
@@ -106,6 +117,13 @@
               <a href="{{ url('admin/trend') }}">Danh sách</a>
             </li>
           </ul>
+        </li>
+
+        <li class="treeview {{(Request::segment(2) == 'company')? 'active' : '' }}">
+          <a href="{{ url('admin/company') }}"><i class="fa fa-link"></i> <span>Thông tin Công Ty</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
         </li>
 
         {{-- <li class="treeview {{(Request::segment(2) == 'tasting')? 'active' : '' }}">
