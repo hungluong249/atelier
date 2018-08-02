@@ -48,7 +48,7 @@
                                     @endif
                                 </div>
                             </div>
-                            {{-- <div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
                                 <label for="category_id" class="col-md-2 control-label">Danh mục</label>
 
                                 <div class="col-md-8">
@@ -68,7 +68,7 @@
                                     </span>
                                     @endif
                                 </div>
-                            </div> --}}
+                            </div>
                             <div class="form-group">
                                 <label for="avatar" class="col-md-2 control-label" >Hình ảnh đang sử dụng</label>
                                 <div class="col-md-8">

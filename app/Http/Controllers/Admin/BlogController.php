@@ -58,7 +58,7 @@ class BlogController extends Controller
         $uniqueSlug = $this->buildUniqueSlug('blog_category', null, $request->slug);
 
         $path = $request->file('image')->store('blogs');
-        $keys = ['title', 'description', 'content', 'is_active'];
+        $keys = ['category_id', 'title', 'description', 'content', 'is_active'];
         $input = $this->createQueryInput($keys, $request);
         $input['image'] = $path;
         $input['slug'] = $uniqueSlug;
@@ -106,11 +106,13 @@ class BlogController extends Controller
     public function update(Request $request, $id){
         $this->validateInput($request, 'edit');
         $detail = Blog::where(['is_deleted' => 0, 'id' => $id])->first();
+        $detailCategory = BlogCategory::where(['is_deleted' => 0, 'id' => $request->category_id])->first();
         $uniqueSlug = $this->buildUniqueSlug('blog', $id, $request->slug);
 
-        $keys = ['title', 'description', 'content', 'is_active'];
+        $keys = ['category_id', 'title', 'description', 'content', 'is_active'];
         $input = $this->createQueryInput($keys, $request);
         $input['slug'] = $uniqueSlug;
+        $input['category_active'] = $detailCategory['is_active'];
 
         // Upload image
         if($request->file('image')){

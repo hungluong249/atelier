@@ -18,7 +18,7 @@ class TrendApiController extends Controller
 
     public function fetchAllTrendCategoryForHomePage()
     {
-        $result = TrendCategory::where('is_deleted', 0)->take(10)->get();
+        $result = TrendCategory::where(['is_deleted' => 0, 'is_active' => 1])->take(10)->get();
         if(!$result){
             return response()->json('No item found', 404);
         }
@@ -37,16 +37,17 @@ class TrendApiController extends Controller
     public function fetchAllTrend()
     {
     	$slug = Input::get('slug');
-    	$detailTrendCategory = TrendCategory::where(['is_deleted' => 0, 'slug' => $slug])->first();
+    	$detailTrendCategory = TrendCategory::where(['is_deleted' => 0, 'slug' => $slug, 'is_active' => 1])->first();
     	$result = Trend::where(['is_deleted' => 0, 'category_id' => $detailTrendCategory['id']])->get();
         if($slug == ''){
-            $result = Trend::where(['is_deleted' => 0])->get();
+            $result = Trend::where(['is_deleted' => 0, 'is_active' => 1, 'category_active' => 1])->get();
         }
         foreach ($result as $key => $value) {
             $trendCatgory = TrendCategory::where(['is_deleted' => 0, 'id' => $value['category_id']])->first();
             $result[$key]['cate_title'] = $trendCatgory['title'];
             $result[$key]['image'] = json_decode($value['image'])[0];
         }
+
         if(!$result){
             return response()->json('No item found', 404);
         }

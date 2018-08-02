@@ -104,7 +104,6 @@
             url: API_URL + 'about-overview'
         }).then(function (success) {
             $scope.aboutOverView = success.data;
-            console.log($scope.aboutOverView);
         }, function (error) {
         
         });
