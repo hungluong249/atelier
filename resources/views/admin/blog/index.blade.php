@@ -31,7 +31,7 @@
                             <thead>
                                 <tr role="row">
                                     <th style="width: 150px">Hình Ảnh</th>
-                                    <th>Tên xu hướng</th>
+                                    <th>Tên bài viết</th>
                                     <th>Sử dụng?</th>
                                     <th>Hành động</th>
                                 </tr>
@@ -66,7 +66,7 @@
                             <tfoot>
                                 <tr>
                                     <th>Hình Ảnh</th>
-                                    <th>Tên xu hướng</th>
+                                    <th>Tên bài viết</th>
                                     <th>Sử dụng?</th>
                                     <th>Hành động</th>
                                 </tr>
