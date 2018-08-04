@@ -99,33 +99,48 @@
 
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="left col-sm-6 col-xs-12 hidden-xs">
+                        <div class="left col-sm-6 col-xs-12">
                             <div id="slider-product" class="carousel slide" data-ride="carousel">
 
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox">
-
                                     <div class="item"  ng-class="{active : $index === 0}" ng-repeat="library in libraries">
                                         <div class="mask">
                                             <img src="{{ asset('storage/app/library') }}<% '/' + library.slug + '/' + library.image %>" alt="image about 1">
                                         </div>
                                         <div class="carousel-caption">
-                                            <h4 class="sub-heading light">Product</h4>
+                                            <h4 class="sub-heading light">Sản phẩm</h4>
 
                                             <h1 class="heading light"><% library.title %></h1>
 
-
-                                            <a href="{{ url('/san-pham/chi-tiet') }}<% '/' + library.slug  %>" class="btn btn-default" role="button" target="_self" >View detail</a>
+                                            <a href="{{ url('/san-pham/chi-tiet') }}<% '/' + library.slug  %>" class="btn btn-default" role="button" target="_self" >Xem chi tiết</a>
                                         </div>
                                     </div>
+                                    <div class="item">
+                                        <div class="mask">
+                                            <img src="{{ asset('storage/app/library') }}<% '/' + library.slug + '/' + library.image %>" alt="image about 1">
+                                        </div>
+                                        <div class="carousel-caption">
+                                            <h4 class="sub-heading light">Sản phẩm</h4>
 
-                                  
+                                            <h1 class="heading light">Sản phẩm khác</h1>
 
+                                            <a href="{{ url('san-pham') }}" class="btn btn-default" role="button" target="_self" >Xem chi tiết</a>
+                                        </div>
+                                    </div>
                                 </div>
 
+                                <a class="left carousel-control visible-xs" href="#slider-product" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control visible-xs" href="#slider-product" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
                         </div>
-                        <div class="right col-sm-6 col-xs-12">
+                        <div class="right col-sm-6 col-xs-12 hidden-xs">
                             <ul class="slide-control">
 
                                 <li data-target="#slider-product" data-slide-to="<% $index %>" ng-repeat="library in libraries">
