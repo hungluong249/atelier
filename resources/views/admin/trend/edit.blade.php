@@ -76,15 +76,21 @@
 
                             <div class="form-group">
                                 <label for="avatar" class="col-md-2 control-label" >Hình ảnh đang sử dụng</label>
-                                <div class="col-md-6">
+                                <div class="col-md-8">
+                                    <h4>Click vào hình ảnh để chọn làm Avatar</h4>
                                     <?php $image = json_decode($detail->image);?>
                                     @if(is_array($image) == true)
                                     @foreach ($image as $val)
-                                    <div style="position: relative; width: 150px; float: left; margin-right: 5%;">
-                                        <button type="button" class="close remove-image" aria-label="Close" style="position: absolute; top: -10px; right: 5px; background: red; border-radius: 50%; padding: 0 7px 3px" title="Xóa" data-image="{{$val}}" data-id="{{$detail->id}}">
+                                    <div style="position: relative; width: 150px; float: left; margin-right: 5%;border:1px solid gray;margin-bottom: 15px;">
+                                        <!-- <button type="button" class="close remove-image" aria-label="Close" style="position: absolute; top: -10px; right: 5px; background: red; border-radius: 50%; padding: 0 7px 3px" title="Xóa" data-image="{{$val}}" data-id="{{$detail->id}}">
                                             <span aria-hidden="true" style="cursor: pointer;">&times;</span>
-                                        </button>
-                                        {{ HTML::image('storage/app/trends/'.$detail->slug.'/'.$val, '', array('width' => 100)) }}
+                                        </button> -->
+                                        <i class="fa fa-2x fa-times remove-image" title="Xóa" data-image="{{$val}}" data-id="{{$detail->id}}" style="position: absolute;left: 120px;color: red; cursor: pointer;"></i>
+                                        <?php if ($val == $detail->avatar): ?>
+                                            <i class="fa fa-2x fa-check" style="position: absolute;left: 90px;color: green"></i>
+                                        <?php endif ?>
+                                        <!-- {{ HTML::image('storage/app/trends/'.$detail->slug.'/'.$val, '', array('width' => 100)) }} -->
+                                        <img class="active-avatar" src="{{ asset('storage/app/trends/'.$detail->slug.'/'.$val) }}" alt="" data-image="{{$val}}" data-id="{{$detail->id}}" width="100%" style="cursor: pointer;">
                                     </div>
                                     @endforeach
                                     @endif

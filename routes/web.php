@@ -284,6 +284,7 @@ Route::prefix('admin')->group(function() {
         Route::post('trend/search', 'TrendController@search')->name('trend.search');
         Route::post('trend/update/{id}', 'TrendController@update')->name('trend.update');
         Route::post('trend/deleteImage', 'TrendController@delete_image');
+        Route::post('trend/activeAvatar', 'TrendController@active_avatar');
 
         //Banner route
         Route::post('banner/deactive', 'BannerController@deactive')->name('banner.deactive');

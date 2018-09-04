@@ -52,7 +52,7 @@
                         <a href="{{ url('xu-huong/chi-tiet/') }}<% '/' + trend.slug %>" target="_self">
                             <div class="inner">
                                 <div class="mask">
-                                    <img ng-src="{{ asset('storage/app/trends') }}<% '/' + trend.slug + '/' + trend.image %>" alt="A masonry brick">
+                                    <img ng-src="{{ asset('storage/app/trends') }}<% '/' + trend.slug + '/' + trend.avatar %>" alt="A masonry brick">
                                     <div class="content">
                                         <h4 class="post-subheading dark"><% trend.cate_title %></h4>
                                         <h2 class="post-heading dark"><% trend.title %></h2>

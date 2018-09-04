@@ -9,7 +9,7 @@ class Trend extends Model
     public $table = 'trend';
 
     protected $fillable = [
-        'id', 'category_id', 'title', 'slug', 'image', 'description', 'content', 'is_active', 'is_deleted'
+        'id', 'category_id', 'title', 'slug', 'image', 'description', 'content', 'is_active', 'is_deleted', 'avatar'
     ];
 
 

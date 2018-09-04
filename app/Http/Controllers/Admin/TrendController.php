@@ -64,7 +64,6 @@ class TrendController extends Controller
             $fileName[$key] = $file->hashName();
             $file->store('trends/' . $newFolderPath[0]);
         }
-
         $image_json = json_encode($fileName);
 
         
@@ -72,6 +71,7 @@ class TrendController extends Controller
         $keys = ['category_id', 'title', 'description', 'content', 'is_active'];
         $input = $this->createQueryInput($keys, $request);
         $input['image'] = $image_json;
+        $input['avatar'] = $fileName[0];
         $input['slug'] = $uniqueSlug;
         
 
@@ -267,26 +267,45 @@ class TrendController extends Controller
         $id = $request->id;
         $path = base_path() . '/storage/app/trends/';
         $trend = Trend::findOrFail($id);
-
-
-        $upload = [];
-        $upload = json_decode($trend->image);
-        $key = array_search($image, $upload);
-        unset($upload[$key]);
-        $newUpload = [];
-        foreach ($upload as $key => $value) {
-            $newUpload[] = $value;
+        if($trend->avatar == $image){
+            return response()->json(['result' => false, 'status' => '200']);
+        }else{
+            $upload = [];
+            $upload = json_decode($trend->image);
+            $key = array_search($image, $upload);
+            unset($upload[$key]);
+            $newUpload = [];
+            foreach ($upload as $key => $value) {
+                $newUpload[] = $value;
+            }
+            
+            $image_json = json_encode($newUpload);
+            $result = DB::table('trend')
+                ->where('id', $id)
+                ->update(['image' => $image_json]);
+            if($result){
+                File::delete($path.$trend->slug.'/'.$image);
+                $success = true;
+            }
+            return response()->json(['result' => true, 'status' => '200']); 
         }
         
-        $image_json = json_encode($newUpload);
-        $result = DB::table('trend')
+    }
+
+    public function active_avatar(Request $request)
+    {
+        $image = $request->image;
+        $id = $request->id;
+        $trend = Trend::findOrFail($id);
+        if($trend){
+            $result = DB::table('trend')
             ->where('id', $id)
-            ->update(['image' => $image_json]);
-        if($result){
-            File::delete($path.$trend->slug.'/'.$image);
-            $success = true;
+            ->update(['avatar' => $image]);
+            if($result){
+                return response()->json(['result' => true, 'status' => '200']);
+            }else{
+                return response()->json(['result' => false, 'status' => '200']);
+            }
         }
-        return response()->json(['image_json' => $image_json, 'status' => '200']); 
-        
     }
 }
